@@ -4,7 +4,7 @@ x_values = range(1,5001)
 y_values = [x**3 for x in x_values]
 
 fig, ax = plt.subplots(figsize=(16,10))
-ax.scatter(x_values, y_values, s=10)
+ax.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Reds, s=10)
 
 # Set chart title and label axes.
 ax.set_title("Cube Numbers", fontsize=24)
