@@ -9,6 +9,9 @@ path = Path(__file__).resolve().parent / 'data' \
 contents = path.read_text()
 all_eq_data = json.loads(contents)
 
+# Extract title of dataset
+title = all_eq_data['metadata']['title']
+
 # Examine all earthquakes in the dataset.
 all_eq_dicts = all_eq_data['features']
 
@@ -19,7 +22,6 @@ for eq_dict in all_eq_dicts:
     lats.append( eq_dict['geometry']['coordinates'][1] )
     eq_titles.append( eq_dict['properties']['title'] )
 
-title = 'Global Earthquakes'
 fig = px.scatter_geo(lat=lats, lon=lons, size=mags, title=title,
         color=mags,
         color_continuous_scale='Viridis',
