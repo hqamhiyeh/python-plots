@@ -33,7 +33,7 @@ ax.plot(dates, lows, color='blue', alpha=0.5)
 ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # Format plot.
-ax.set_title("Daily High and Low Temperatures, 2021", fontsize=24)
+ax.set_title("Daily High and Low Temperatures, 2021\nSitka, Alaska", fontsize=20)
 ax.set_xlabel('', fontsize=16)
 fig.autofmt_xdate()
 ax.set_ylabel("Temperature (F)", fontsize=16)
